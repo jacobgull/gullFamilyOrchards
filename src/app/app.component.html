@@ -1,7 +1,7 @@
-<nav class="navbar bg-base-100">
+<nav class="navbar bg-primary text-white shadow-lg">
   <div class="container mx-auto">
     <!-- Logo -->
-    <a class="btn btn-ghost normal-case text-xl" routerLink="/">Gull Family Orchards</a>
+    <a class="btn btn-ghost normal-case text-xl text-accent" routerLink="/">Gull Family Orchards</a>
 
     <!-- Mobile Menu Toggle Button -->
     <div class="flex-none lg:hidden">
@@ -31,54 +31,49 @@
     </div>
   </div>
 </nav>
-<!-- Router outlet to load pages -->
-<router-outlet/>
 
-<!-- Footer-->
-<footer class="footer bg-base-200 text-base-content py-10">
-  <div class="container mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- Company Info -->
-      <div>
-        <h2 class="footer-title text-lg font-bold">Gull Family Orchards</h2>
-        <p class="mt-2">
-          A family-run company focused on cultivating quality and sustainability. We are dedicated to building a strong foundation for long-term partnerships and success within the industry.
-        </p>
-        <p class="mt-2">© 2024 Gull Family Orchards LLC. All Rights Reserved.</p>
-      </div>
+<!-- Main Content Wrapper with Flexbox for Sticky Footer -->
+<div class="flex flex-col min-h-screen">
+  <!-- Main Content -->
+  <div class="flex-grow">
+    <router-outlet></router-outlet>
+  </div>
 
-      <!-- Quick Links -->
-      <div>
-        <h2 class="footer-title text-lg font-bold">Quick Links</h2>
-        <ul class="list-none space-y-2">
-          <li><a class="link link-hover" href="/">Home</a></li>
-          <li><a class="link link-hover" href="/about">About Us</a></li>
-          <li><a class="link link-hover" href="/contact">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Social Media -->
-      <div>
-        <h2 class="footer-title text-lg font-bold">Follow Us</h2>
-        <div class="flex space-x-4 mt-2">
-          <a href="https://facebook.com" class="link link-hover">
-            <i class="fab fa-facebook-square" style="color: #1877F2;"></i>
-          </a>
-          <a href="https://instagram.com" class="link link-hover">
-            <i class="fab fa-instagram" style="color: #E1306C;"></i>
-          </a>
-          <a href="https://linkedin.com" class="link link-hover">
-            <i class="fab fa-linkedin" style="color: #0A66C2;"></i>
-          </a>
+  <!-- Footer -->
+  <footer class="footer bg-gradient-to-t from-primary-dark via-primary-light to-bg-neutral text-base-content py-10 bg-opacity-70">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h2 class="footer-title text-lg font-bold">Gull Family Orchards</h2>
+          <p class="mt-2">A family-run company focused on cultivating quality and sustainability. We are dedicated to building a strong foundation for long-term partnerships and success within the industry.</p>
+          <p class="mt-2">© 2024 Gull Family Orchards LLC. All Rights Reserved.</p>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h2 class="footer-title text-lg font-bold">Quick Links</h2>
+          <ul class="list-none space-y-2">
+            <li><a class="link link-hover" href="/">Home</a></li>
+            <li><a class="link link-hover" href="/about">About Us</a></li>
+            <li><a class="link link-hover" href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Social Media Links -->
+        <div>
+          <h2 class="footer-title text-lg font-bold">Follow Us</h2>
+          <div class="flex space-x-4 mt-2">
+            <a href="https://facebook.com" class="link link-hover"><i class="fab fa-facebook-square text-2xl hover:text-blue-500"></i></a>
+            <a href="https://instagram.com" class="link link-hover"><i class="fab fa-instagram text-2xl hover:text-pink-500"></i></a>
+            <a href="https://linkedin.com" class="link link-hover"><i class="fab fa-linkedin text-2xl hover:text-blue-600"></i></a>
+          </div>
+        </div>
+        <!-- Contact Info -->
+        <div>
+          <h2 class="footer-title text-lg font-bold">Contact Us</h2>
+          <p>Email: <a href="mailto:info@gullfamilyorchards.com" class="link link-hover">info&#64;gullfamilyorchards.com</a></p>
+          <p>Location: Oakdale, CA</p>
         </div>
       </div>
-
-      <!-- Contact Info -->
-      <div>
-        <h2 class="footer-title text-lg font-bold">Contact Us</h2>
-        <p>Email: <a href="mailto:info@gullfamilyorchards.com" class="link link-hover">info&#64;gullfamilyorchards.com</a></p>
-        <p>Location: Oakdale, CA</p>
-      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>
