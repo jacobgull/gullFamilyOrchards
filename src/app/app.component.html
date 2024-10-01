@@ -1,41 +1,38 @@
 <nav class="navbar bg-primary text-white shadow-lg">
-  <div class="container mx-auto">
-    <!-- Logo -->
-    <div class="flex items-center">
-      <!-- Logo Image -->
+  <div class="container mx-auto flex flex-col items-center">
+    <!-- First Row: Logo and Brand Name -->
+    <div class="flex justify-center items-center py-0">
       <a href="/" class="flex items-center">
-        <img src="assets/images/logo.svg" alt="Gull Family Orchards" class="h-10 w-10 mr-2"> <!-- Adjust size as needed -->
-        <!-- Optionally retain the brand name text next to the logo -->
-        <a class="btn btn-ghost normal-case text-xl text-accent" routerLink="/">Gull Family Orchards</a>
+        <span class="text-3xl font-bold text-accent">Gull Family Orchards</span> <!-- Center Title -->
       </a>
     </div>
 
-    <!-- Mobile Menu Toggle Button -->
-    <div class="flex-none lg:hidden">
-      <button class="btn btn-square btn-ghost" (click)="toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Links for Desktop -->
-    <div class="hidden lg:flex">
-      <ul class="menu menu-horizontal p-0">
-        <li><a class="nav-link" routerLink="/">Home</a></li>
-        <li><a class="nav-link" routerLink="/about">About</a></li>
-        <li><a class="nav-link" routerLink="/contact">Contact</a></li>
+    <!-- Second Row: Links -->
+    <div class="flex justify-center">
+      <ul class="menu menu-horizontal space-x-4">
+        <li><a class="nav-link text-2xl" routerLink="/">Home</a></li>
+        <li><a class="nav-link text-2xl" routerLink="/about">About</a></li>
+        <li><a class="nav-link text-2xl" routerLink="/contact">Contact</a></li>
       </ul>
     </div>
+  </div>
 
-    <!-- Mobile Menu -->
-    <div [ngClass]="{'hidden': !isMenuOpen}" class="lg:hidden">
-      <ul class="menu menu-compact mt-3 shadow bg-base-100 rounded-box w-52">
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-      </ul>
-    </div>
+  <!-- Mobile Menu Toggle Button (hidden on larger screens) -->
+  <div class="lg:hidden mt-4">
+    <button class="btn btn-square btn-ghost" (click)="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div [ngClass]="{'hidden': !isMenuOpen}" class="lg:hidden">
+    <ul class="menu menu-compact mt-3 shadow bg-base-100 rounded-box w-52">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
