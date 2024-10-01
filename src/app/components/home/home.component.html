@@ -1,0 +1,40 @@
+<div class="container mx-auto p-0">
+  <div id="carouselGullFamilyOrchards" class="carousel relative w-full">
+    <!-- First Slide -->
+    <div id="slide1" class="carousel-item active relative w-full">
+      <img src="assets/images/orchards2.jpg" class="carousel-image" alt="First slide" />
+      <div class="absolute flex justify-center items-center bottom-10 w-full">
+        <div class="text-white text-center bg-black bg-opacity-50 p-4 rounded-lg">
+          <h5 class="text-2xl">Welcome to Gull Family Orchards</h5>
+          <p>Fresh almonds grown with care and dedication.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Slide -->
+    <div id="slide2" class="carousel-item relative w-full">
+      <img src="assets/images/KnightsFerryBridge.jpg" class="carousel-image" alt="Second slide" />
+      <div class="absolute flex justify-center items-center bottom-10 w-full">
+        <div class="text-white text-center bg-black bg-opacity-50 p-4 rounded-lg">
+          <h5 class="text-2xl">Discover Our Story</h5>
+          <p>Committed to sustainable practices and quality farming.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Slide -->
+    <div id="slide3" class="carousel-item relative w-full">
+      <img src="assets/images/orchards.jpg" class="carousel-image" alt="Third slide" />
+      <div class="absolute flex justify-center items-center bottom-10 w-full">
+        <div class="text-white text-center bg-black bg-opacity-50 p-4 rounded-lg">
+          <h5 class="text-2xl">Join Us at the Orchard</h5>
+          <p>Experience the beauty of nature at Gull Family Orchards.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button (click)="moveCarousel(-1)" class="btn btn-circle absolute top-1/2 left-5 transform -translate-y-1/2">❮</button>
+    <button (click)="moveCarousel(1)" class="btn btn-circle absolute top-1/2 right-5 transform -translate-y-1/2">❯</button>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+/* Carousel container */
+.carousel {
+  position: relative;
+  overflow: hidden; /* Hide items that are not visible */
+}
+
+/* Initially hide all slides */
+.carousel-item {
+  width: 100%;
+  display: none; /* Initially hide all slides */
+  transform: translateX(100%); /* Start off-screen to the right */
+  transition: transform 0.5s ease-in-out; /* Smooth slide transition */
+}
+
+/* Show the active slide */
+.carousel-item.active {
+  display: block; /* Display active slide */
+  transform: translateX(0); /* Bring the active slide into view */
+}
+
+/* Previous slide moving out */
+.carousel-item.previous {
+  transform: translateX(-100%); /* Move previous slide out to the left */
+}
+
+/* Next slide moving in */
+.carousel-item.next {
+  transform: translateX(100%); /* Move next slide in from the right */
+}
+
+/* Optional: Carousel images styling */
+.carousel-image {
+  max-height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Carousel control buttons */
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: white;
+  z-index: 20; /* Ensure the buttons are on top of the images */
+}
+
+/* Optional: Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .carousel-image {
+    max-height: 300px;
+  }
+}
