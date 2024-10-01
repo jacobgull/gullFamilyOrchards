@@ -6,8 +6,8 @@
     "start": "ng serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build": "ng build && ngx-sitemap dist/gull-family-orchards/browser https://www.gullfamilyorchards.com/",
-    "build-ghpages": "ng build --configuration=ghpages && ngx-sitemap dist/gull-family-orchards/browser https://www.gullfamilyorchards.com/"
+    "build": "ng build",
+    "build-ghpages": "ng build --configuration=ghpages --base-href 'https://www.gullfamilyorchards.com' && cp src/assets/robots.txt dist/gull-family-orchards/ && cp src/assets/sitemap.xml dist/gull-family-orchards/ && npx angular-cli-ghpages --dir=dist/gull-family-orchards"
   },
   "private": true,
   "dependencies": {
