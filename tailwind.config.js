@@ -44,16 +44,17 @@ module.exports = {
             'error': '#F87272',
         },
         dark: {
-          primary: "#2E7D32",        // Darker green
-          secondary: "#5D4037",      // Dark brown
-          accent: "#FFC107",         // Brighter yellow accent
-          neutral: "#1A1A1A",        // Dark background
-          "base-100": "#333333",     // Dark gray background for content
-          info: "#3ABFF8",           // Same for both light and dark
-          success: "#36D399",        // Same for both light and dark
-          warning: "#FBBD23",        // Same for both light and dark
-          error: "#F87272",          // Same for both light and dark
-        },
+          primary: "#2E7D32",           // Dark green for primary buttons/links
+          secondary: "#8B7E59",         // Dark beige for secondary accents
+          accent: "#FFC107",            // Brighter yellow accent for contrast
+          neutral: "#D9D9D9",           // Lighter gray for neutral backgrounds in dark mode
+          "base-100": "#F5F5F5",        // Light gray background for dark mode
+          "base-content": "#000000",    // Black text for dark mode
+          info: "#3ABFF8",              // Info color (unchanged)
+          success: "#36D399",           // Success color (unchanged)
+          warning: "#FBBD23",           // Warning color (unchanged)
+          error: "#F87272",             // Error color (unchanged)
+        }
       },
     ]
   },

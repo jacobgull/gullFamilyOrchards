@@ -8,31 +8,33 @@
     </div>
 
     <!-- Second Row: Links -->
-    <div class="flex justify-center">
+    <div class="hidden md:flex justify-center">
       <ul class="menu menu-horizontal space-x-4">
-        <li><a class="nav-link text-2xl" routerLink="/">Home</a></li>
-        <li><a class="nav-link text-2xl" routerLink="/about">About</a></li>
-        <li><a class="nav-link text-2xl" routerLink="/contact">Contact</a></li>
+        <li><a class="nav-link text-2xl text-accent" routerLink="/">Home</a></li>
+        <li><a class="nav-link text-2xl text-accent" routerLink="/about">About</a></li>
+        <li><a class="nav-link text-2xl text-accent" routerLink="/contact">Contact</a></li>
       </ul>
     </div>
-  </div>
-
-  <!-- Mobile Menu Toggle Button (hidden on larger screens) -->
-  <div class="lg:hidden mt-4">
-    <button class="btn btn-square btn-ghost" (click)="toggleMenu()">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div [ngClass]="{'hidden': !isMenuOpen}" class="lg:hidden">
-    <ul class="menu menu-compact mt-3 shadow bg-base-100 rounded-box w-52">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
-    </ul>
+    <div class="md:flex justify-center">
+        <!-- Mobile Menu Toggle Button (visible only on small screens) -->
+        <div class="md:hidden flex justify-center mt-4">
+          <button class="btn btn-square btn-ghost" (click)="toggleMenu()">
+            <!-- Hamburger Icon with Accent Color -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+  
+        <!-- Mobile Menu (visible only on small screens) -->
+        <div [ngClass]="{'hidden': !isMenuOpen}" class="md:hidden">
+          <ul class="menu menu-compact mt-3 shadow bg-primary text-accent rounded-box w-52 text-center">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+          </ul>
+        </div>
+    </div>
   </div>
 </nav>
 
