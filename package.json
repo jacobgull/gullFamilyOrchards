@@ -35,6 +35,7 @@
     "@angular-devkit/build-angular": "^18.2.7",
     "@angular/cli": "^18.2.6",
     "@angular/compiler-cli": "^18.2.0",
+    "@types/jest": "^29.5.13",
     "angular-cli-ghpages": "^2.0.1",
     "ngx-sitemap": "^1.0.0",
     "sass": "^1.79.4",
